@@ -41,3 +41,26 @@ def plot_decision_boundary(w, b, X, y):
     plt.ylabel('Exam 2 score')
     plt.legend()
     plt.show()
+
+def map_feature(x1, x2, degree=6):
+    """
+    Maps two input features to polynomial features up to the given degree.
+    
+    Args:
+        x1, x2 : array-like, shape (m,)
+        degree : maximum degree of polynomial features
+
+    Returns:
+        out : array, shape (m, number of features)
+    """
+    if x1.ndim > 0:
+        x1 = x1[:, np.newaxis]
+    if x2.ndim > 0:
+        x2 = x2[:, np.newaxis]
+
+    out = np.ones_like(x1)  # bias term
+    for i in range(1, degree + 1):
+        for j in range(i + 1):
+            term = (x1 ** (i - j)) * (x2 ** j)
+            out = np.hstack((out, term))
+    return out

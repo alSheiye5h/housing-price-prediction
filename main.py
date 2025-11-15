@@ -211,3 +211,29 @@ print("Original shape of data:", X_train.shape)
 
 mapped_X =  map_feature(X_train[:, 0], X_train[:, 1])
 print("Shape after feature mapping:", mapped_X.shape)
+
+def compute_cost_reg(X, y, w, b, lambda_ = 1):
+    m, n = X.shape
+    
+    # Cost without regularization
+    cost_without_reg = compute_cost(X, y, w, b) 
+    
+    # Compute the regularization cost
+    reg_cost = (lambda_ / (2 * m)) * np.sum(w ** 2)
+    
+    # Add the regularization cost
+    total_cost = cost_without_reg + reg_cost
+
+    return total_cost
+
+X_mapped = map_feature(X_train[:, 0], X_train[:, 1])
+np.random.seed(1)
+initial_w = np.random.rand(X_mapped.shape[1]) - 0.5
+initial_b = 0.5
+lambda_ = 0.5
+cost = compute_cost_reg(X_mapped, y_train, initial_w, initial_b, lambda_)
+
+print("Regularized cost :", cost)
+
+# UNIT TEST    
+compute_cost_reg_test(compute_cost_reg)
