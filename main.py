@@ -166,16 +166,6 @@ plt.legend(loc="upper right")
 plt.show()
 
 def predict(X, w, b):
-    """
-    Predict whether the label is 0 or 1 using learned logistic regression parameters w, b.
-    
-    Args:
-      X : (ndarray Shape (m, n)) data, m examples by n features
-      w : (ndarray Shape (n,))  parameters of the model      
-      b : (scalar)              bias parameter of the model
-    Returns
-      p : (ndarray Shape (m,))  predictions (0 or 1)
-    """
     # Ensure X has the same number of features as w
     if X.shape[1] != w.shape[0]:
         # Try to map the features automatically
@@ -194,3 +184,30 @@ def predict(X, w, b):
     p = (f_wb >= 0.5).astype(int)
     
     return p
+
+np.random.seed(1)
+tmp_w = np.random.randn(2)
+tmp_b = 0.3    
+tmp_X = np.random.randn(4, 2) - 0.5
+
+tmp_p = predict(tmp_X, tmp_w, tmp_b)
+print(f'Output of predict: shape {tmp_p.shape}, value {tmp_p}')
+
+p = predict(X_train, w,b)
+print('Train Accuracy: %f'%(np.mean(p == y_train) * 100))
+
+X_train, y_train = load_data("data2.txt")
+# Plot examples
+plot_data(X_train, y_train[:], pos_label="Accepted", neg_label="Rejected")
+
+# Set the y-axis label
+plt.ylabel('Microchip Test 2') 
+# Set the x-axis label
+plt.xlabel('Microchip Test 1') 
+plt.legend(loc="upper right")
+plt.show()
+
+print("Original shape of data:", X_train.shape)
+
+mapped_X =  map_feature(X_train[:, 0], X_train[:, 1])
+print("Shape after feature mapping:", mapped_X.shape)
