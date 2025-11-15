@@ -156,3 +156,41 @@ alpha = 0.001
 
 w,b, J_history,_ = gradient_descent(X_train ,y_train, initial_w, initial_b, 
                                    compute_cost, compute_gradient, alpha, iterations, 0)
+
+plot_decision_boundary(w, b, X_train, y_train)
+# Set the y-axis label
+plt.ylabel('Exam 2 score') 
+# Set the x-axis label
+plt.xlabel('Exam 1 score') 
+plt.legend(loc="upper right")
+plt.show()
+
+def predict(X, w, b):
+    """
+    Predict whether the label is 0 or 1 using learned logistic regression parameters w, b.
+    
+    Args:
+      X : (ndarray Shape (m, n)) data, m examples by n features
+      w : (ndarray Shape (n,))  parameters of the model      
+      b : (scalar)              bias parameter of the model
+    Returns
+      p : (ndarray Shape (m,))  predictions (0 or 1)
+    """
+    # Ensure X has the same number of features as w
+    if X.shape[1] != w.shape[0]:
+        # Try to map the features automatically
+        try:
+            X = map_feature(X[:, 0], X[:, 1])
+        except Exception as e:
+            raise ValueError(f"Feature mapping failed: {e}")
+    
+    # Compute z = Xw + b
+    z = np.dot(X, w) + b
+    
+    # Apply the sigmoid function
+    f_wb = 1 / (1 + np.exp(-z))
+    
+    # Convert probabilities to binary predictions
+    p = (f_wb >= 0.5).astype(int)
+    
+    return p

@@ -23,3 +23,21 @@ def plot_data(X, y, pos_label="Positive", neg_label="Negative"):
     plt.xlabel('Exam 1 score')
     plt.ylabel('Exam 2 score')
     plt.legend()
+
+def plot_decision_boundary(w, b, X, y):
+    # Plot the data points
+    pos = y == 1
+    neg = y == 0
+    plt.scatter(X[pos, 0], X[pos, 1], c='b', marker='o', label='Admitted')
+    plt.scatter(X[neg, 0], X[neg, 1], c='r', marker='x', label='Not admitted')
+
+    # Plot the decision boundary
+    x_values = [np.min(X[:, 0])-2, np.max(X[:, 0])+2]
+    # For logistic regression: w1*x1 + w2*x2 + b = 0 => x2 = -(w1*x1 + b)/w2
+    y_values = -(w[0]*np.array(x_values) + b)/w[1]
+
+    plt.plot(x_values, y_values, label='Decision Boundary')
+    plt.xlabel('Exam 1 score')
+    plt.ylabel('Exam 2 score')
+    plt.legend()
+    plt.show()
