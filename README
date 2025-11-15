@@ -1,0 +1,89 @@
+Logistic Regression Conceptually
+
+It’s a model that predicts probabilities of classes (0 or 1 here).
+
+It uses weights (w) and bias (b) to combine input features.
+
+The sigmoid function converts a linear combination of features into a probability between 0 and 1.
+
+Cost and Gradient
+
+The cost function tells us how wrong the model is.
+
+The gradient tells us how to adjust weights to make the model better.
+
+Gradient descent is just a way to repeatedly adjust weights to minimize the cost.
+
+Regularization (optional at first)
+
+Prevents overfitting when using many features.
+
+Adds a penalty for big weights.
+
+Feature mapping
+
+Helps the model learn non-linear patterns.
+
+Important if your data is not linearly separable.
+
+Features
+
+Data Loading and Visualization
+
+Loads datasets from data.txt and data2.txt.
+
+Visualizes examples using scatter plots with different labels (Admitted/Not admitted or Accepted/Rejected).
+
+Core Functions
+
+Sigmoid function: Maps linear combinations of features to probabilities.
+
+Cost function: Computes the logistic regression loss.
+
+Gradient computation: Calculates gradients of the cost function with respect to weights and bias.
+
+Gradient descent: Iteratively updates parameters to minimize the cost.
+
+Regularization
+
+Supports L2 regularization to avoid overfitting when using polynomial feature mapping.
+
+Includes compute_cost_reg and compute_gradient_reg for regularized cost and gradients.
+
+Feature Mapping
+
+Maps 2D input features to higher-degree polynomial features for non-linear decision boundaries.
+
+Prediction
+
+Converts probabilities to class predictions (0 or 1).
+
+Works with both linear and mapped features.
+
+Decision Boundary Visualization
+
+Plots the decision boundary for linear and non-linear logistic regression models.
+
+Workflow
+
+Load and visualize the data.
+
+Initialize weights w and bias b.
+
+Compute initial cost using compute_cost.
+
+Compute gradients using compute_gradient.
+
+Optimize weights using gradient_descent.
+
+Visualize the decision boundary.
+
+Predict on the training set using predict.
+
+For non-linear problems:
+
+Map features using map_feature.
+
+Use regularized cost and gradient functions (compute_cost_reg, compute_gradient_reg).
+
+Train with gradient descent and visualize results.
