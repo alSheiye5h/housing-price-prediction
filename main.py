@@ -29,3 +29,22 @@ plt.ylabel('Exam 2 score')
 plt.xlabel('Exam 1 score') 
 plt.legend(loc="upper right")
 plt.show()
+
+
+# the sigmoid function : 
+def sigmoid(z):
+    """
+    Compute the sigmoid of z
+    Args:
+        z (ndarray): A scalar, numpy array of any size.
+
+    Returns:
+        g (ndarray): sigmoid(z), with the same shape as z
+    """
+    g = 1 / (1 + np.exp(-z))
+    
+    return g
+
+value = 0
+
+print (f"sigmoid({value}) = {sigmoid(value)}")
