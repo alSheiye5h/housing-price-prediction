@@ -28,7 +28,7 @@ plt.ylabel('Exam 2 score')
 # Set the x-axis label
 plt.xlabel('Exam 1 score') 
 plt.legend(loc="upper right")
-plt.show()
+# plt.show()
 
 
 # the sigmoid function : 
@@ -48,3 +48,5 @@ def sigmoid(z):
 value = 0
 
 print (f"sigmoid({value}) = {sigmoid(value)}")
+
+
