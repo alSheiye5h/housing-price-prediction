@@ -23,6 +23,6 @@ import numpy as np
 # g = np.ones(2, dtype=np.int64)
 # print(g)
 
-a = np.arange(6)
+a = np.array([5, 6, 4, 8, 9, 2])
 b = a.reshape(3, 2)
 print(b) 
