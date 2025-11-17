@@ -77,8 +77,19 @@ import numpy as np
 
 # print(np.hsplit(x, 3))
 
+# data = np.array([1, 2])
+# other = np.array([5, 6])
 
+# print(data + other)
 
+import pandas as pd
+import numpy as np
+np.random.seed(seed=1234)
+
+url = "https://raw.githubusercontent.com/GokuMohandas/Made-With-ML/main/datasets/titanic.csv"
+df = pd.read_csv(url, header=0)
+
+df.head(3)
 
 
 
