@@ -35,7 +35,7 @@ print(a.shape)
 
 a2 = a[np.newaxis, :]
 print(a2)
-print(a2.shape)
+print(a2.shape) 
 
 
 
