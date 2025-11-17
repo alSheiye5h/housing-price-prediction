@@ -45,10 +45,26 @@ import numpy as np
 # print(col_vector)
 # print(col_vector.shape)
 
-a = np.array([1, 2, 3, 4, 5, 6])
-b = np.expand_dims(a, axis=1)
-print(b)
-print(b.shape)
+# a = np.array([1, 2, 3, 4, 5, 6])
+# b = np.expand_dims(a, axis=1)
+# print(b)
+# print(b.shape)
+
+# c = np.expand_dims(a, axis=0)
+# print(c)
+# print(c.shape)
+
+# data = np.array([1, 2, 3])
+# print(data[1])
+# print(data[0:2])
+# print(data[1:])
+# print(data[-2:])
+
+a = np.array([[1, 2, 3], [5, 6, 7, 8], [9, 10, 11, 12]])
+print(a)
+
+
+
 
 
 
