@@ -89,7 +89,7 @@ np.random.seed(seed=1234)
 url = "https://raw.githubusercontent.com/GokuMohandas/Made-With-ML/main/datasets/titanic.csv"
 df = pd.read_csv(url, header=0)
 
-df.head(3)
+df.head(3)  
 
 
 
