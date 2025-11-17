@@ -24,4 +24,5 @@ g = np.ones(2, dtype=np.int64)
 print(g)
 
 a = np.arange(6)
-np.reshape()
+b = np.reshape(3, 2)
+print(b) 
