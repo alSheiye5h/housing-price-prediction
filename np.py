@@ -82,14 +82,99 @@ import numpy as np
 
 # print(data + other)
 
-import pandas as pd
+# import pandas as pd
+# import numpy as np
+# np.random.seed(seed=1234)
+
+# url = "https://raw.githubusercontent.com/GokuMohandas/Made-With-ML/main/datasets/titanic.csv"
+# df = pd.read_csv(url, header=0)
+
+# df.head(3)  
+
+
+
+
+
 import numpy as np
-np.random.seed(seed=1234)
+import os
 
-url = "https://raw.githubusercontent.com/GokuMohandas/Made-With-ML/main/datasets/titanic.csv"
-df = pd.read_csv(url, header=0)
+# for dirname, _, filenames in os.walk('../input'):
+#     for filename in filenames:
+#         print(os.path.join(dirname, filename))
 
-df.head(3)  
+# from IPython.core.interactiveshell import InteractiveShell
+# InteractiveShell.ast_node_interactivity = 'all'
+
+# print(np.__version__)
+
+# a = np.arange(10)
+# print(a)
+
+# b = np.full((3, 3), True, dtype=bool)
+# c = np.full((9), True, dtype=bool).reshape(3, 3)
+# d = np.ones((3, 3), dtype=bool)
+# e = np.ones((9), dtype=bool)
+# print(b)
+# print(c)
+# print(d)
+# print(e)
+
+# arr = np.arange(10)
+
+# two_arr = arr[arr % 2 == 1] 
+# three_arr = arr
+# three_arr[three_arr % 2 == 1] = -1
+
+# print(two_arr)
+# print(three_arr)
+
+
+# arr = np.arange(10)
+
+# out = arr.reshape(2, 5)
+
+# print(out)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
