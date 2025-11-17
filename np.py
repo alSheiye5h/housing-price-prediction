@@ -66,6 +66,16 @@ import numpy as np
 # five_up = (a >= 5)
 # print(a[five_up])
 
+# a1 = np.array([[1, 1], [2, 2]])
+# a2 = np.array([[3, 3], [4, 4]])
+
+# print(np.vstack((a1, a2)))
+# print(np.hstack((a1, a2)))
+
+# x = np.arange(1, 25).reshape(2, 12)
+# print(x)
+
+# print(np.hsplit(x, 3))
 
 
 
