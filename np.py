@@ -26,3 +26,7 @@ import numpy as np
 a = np.array([5, 6, 4, 8, 9, 2])
 b = a.reshape(3, 2)
 print(b) 
+
+
+
+print(np.reshape(a, (1, 6), order='C'))
