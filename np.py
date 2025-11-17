@@ -23,10 +23,46 @@ import numpy as np
 # g = np.ones(2, dtype=np.int64)
 # print(g)
 
-a = np.array([5, 6, 4, 8, 9, 2])
-b = a.reshape(3, 2)
-print(b) 
+# a = np.array([5, 6, 4, 8, 9, 2])
+# b = a.reshape(3, 2)
+# print(b) 
+
+# print(np.reshape(a, (2, 3), order='C'))
+
+a = np.array([1, 2, 3, 4, 5, 6])
+print(a)
+print(a.shape)
+
+a2 = a[np.newaxis, :]
+print(a2)
+print(a2.shape)
 
 
 
-print(np.reshape(a, (1, 6), order='C'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
