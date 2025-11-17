@@ -60,8 +60,11 @@ import numpy as np
 # print(data[1:])
 # print(data[-2:])
 
-a = np.array([[1, 2, 3], [5, 6, 7, 8], [9, 10, 11, 12]])
-print(a)
+# a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+# print(a[a < 6])
+
+# five_up = (a >= 5)
+# print(a[five_up])
 
 
 
