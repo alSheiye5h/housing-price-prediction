@@ -29,16 +29,20 @@ import numpy as np
 
 # print(np.reshape(a, (2, 3), order='C'))
 
+# a = np.array([1, 2, 3, 4, 5, 6])
+# print(a)
+# print(a.shape)
+
+# a2 = a[np.newaxis, :]
+# print(a2)
+# print(a2.shape) 
+
 a = np.array([1, 2, 3, 4, 5, 6])
-print(a)
-print(a.shape)
+row_vector = a[np.newaxis, :]
+print(row_vector.shape)
 
-a2 = a[np.newaxis, :]
-print(a2)
-print(a2.shape) 
-
-
-
+col_vector = a[:, np.newaxis]
+print(col_vector.shape)
 
 
 
