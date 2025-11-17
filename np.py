@@ -23,3 +23,5 @@ print(f)
 g = np.ones(2, dtype=np.int64)
 print(g)
 
+a = np.arange(6)
+np.reshape()
