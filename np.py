@@ -188,10 +188,11 @@ import numpy as np
 # matrix1 = np.arange(1, 10).reshape(3, 3)
 # print(matrix == matrix1)
 
-# matr = np.linspace(0, 10, 3)
+matr = np.linspace(0, 10, 4)
 
 # identity matrix
 identity = np.eye(4)
+print(matr)
 
 
 
