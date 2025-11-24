@@ -188,11 +188,33 @@ import numpy as np
 # matrix1 = np.arange(1, 10).reshape(3, 3)
 # print(matrix == matrix1)
 
-matr = np.linspace(0, 10, 4)
+# matr = np.linspace(0, 10, 4)
 
 # identity matrix
-identity = np.eye(4)
-print(matr)
+# identity = np.eye(4)
+# print(matr)
+
+# rand = np.random.rand(4)
+# print(rand)
+
+# rand1 = np.random.rand(5, 5)
+
+# randarr = np.random.randint(0, 50, 10)
+# print(randarr)
+
+# print(randarr.argmax())
+# print(randarr.argmin())
+
+arr2d = np.zeros((10, 10))
+arrlength = arr2d.shape[1]
+print(arr2d.shape[0])
+print(arrlength)
+
+for i in range(arrlength):
+    arr2d[i] = i
+
+print(arr2d)
+
 
 
 
