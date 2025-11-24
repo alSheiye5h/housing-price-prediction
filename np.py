@@ -95,8 +95,8 @@ import numpy as np
 
 
 
-import numpy as np
-import os
+# import numpy as np
+# import os
 
 # for dirname, _, filenames in os.walk('../input'):
 #     for filename in filenames:
@@ -128,12 +128,80 @@ import os
 # print(two_arr)
 # print(three_arr)
 
-
 # arr = np.arange(10)
 
 # out = arr.reshape(2, 5)
 
 # print(out)
+
+# a = np.arange(10).reshape(2, -1)
+# b = np.repeat(1, 10).reshape(2, -1)
+# print(a)
+# print(b)
+
+# c = np.vstack([a, b])
+# print(c)
+
+# d = np.hstack([a, b])
+# print(d)
+
+# a = np.arange(3)
+# b = np.repeat(a, 3)
+# c = np.tile(a, 3)
+
+# d = np.r_[b, c]
+
+# print(d)
+
+# a = np.array([1,2,3,2,3,4,3,4,5,6])
+# b = np.array([7,2,10,2,7,4,9,4,9,8])
+# c = np.intersect1d(a, b)
+# print(c)
+
+# d = np.setdiff1d(a, b)
+# print(d)
+
+# a = np.array([1,2,3,2,3,4,3,4,5,6])
+# b = np.array([7,2,10,2,7,4,9,4,9,8])
+
+# c = np.where(a == b)
+# print(c)
+
+# d = a[(a >= 5) & (a <= 10)]
+# print(d)
+
+# def maxx(x, y):
+#     if x > y:
+#         return x
+#     else :
+#         return y
+
+
+# def pair_max(x, y):
+#     maximum = [maxx(a, b) for a,b in map(lambda a,b:(a,b),x,y)]
+
+# import numpy as np
+
+# my_list = np.array([1, 5, 6, 8])
+# my_matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# matrix = np.array(my_matrix)
+# matrix1 = np.arange(1, 10).reshape(3, 3)
+# print(matrix == matrix1)
+
+# matr = np.linspace(0, 10, 3)
+
+# identity matrix
+identity = np.eye(4)
+
+
+
+
+
+
+
+
+
+
 
 
 
