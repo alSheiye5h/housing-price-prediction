@@ -219,9 +219,12 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# reproducibility : setting numpy to generate same sequence of random numbers
+# reproducibility : setting numpy to generate same sequence of random numbers (If you're training a model, initializing weights, splitting data, etc. with randomness, you want to be able to reproduce the same results later.)
 sd = np.random.seed(123)
 print(np.random.randint(1, 10, 5))
+
+poids = pd.Series([3, 7, 12])
+print(poids)
 
 
 
