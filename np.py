@@ -226,6 +226,8 @@ print(np.random.randint(1, 10, 5))
 poids = pd.Series([3, 7, 12])
 print(poids)
 
+animal = pd.Series(['chat', 'chien', 'koala'])
+print(animal)
 
 
 
