@@ -241,7 +241,10 @@ print(animaux)
 # indexing
 print(animaux['poids'])
 
-
+get = animaux.loc[animaux['animal'] == "chat", "poids"]
+get1 = animaux.loc[animaux['poids'] == 12, "animal"]
+print(get)
+print(get1)
 
 
 
