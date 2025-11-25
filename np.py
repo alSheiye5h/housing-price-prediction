@@ -215,6 +215,14 @@ import numpy as np
 
 # print(arr2d)
 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# reproducibility : setting numpy to generate same sequence of random numbers
+sd = np.random.seed(123)
+print(sd)
+
 
 
 
