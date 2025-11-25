@@ -205,15 +205,15 @@ import numpy as np
 # print(randarr.argmax())
 # print(randarr.argmin())
 
-arr2d = np.zeros((10, 10))
-arrlength = arr2d.shape[1]
-print(arr2d.shape[0])
-print(arrlength)
+# arr2d = np.zeros((10, 10))
+# arrlength = arr2d.shape[1]
+# print(arr2d.shape[0])
+# print(arrlength)
 
-for i in range(arrlength):
-    arr2d[i] = i
+# for i in range(arrlength):
+#     arr2d[i] = i
 
-print(arr2d)
+# print(arr2d)
 
 
 
