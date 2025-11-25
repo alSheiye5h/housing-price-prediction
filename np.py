@@ -221,7 +221,7 @@ import matplotlib.pyplot as plt
 
 # reproducibility : setting numpy to generate same sequence of random numbers
 sd = np.random.seed(123)
-print(sd)
+print(np.random.randint(1, 10, 5))
 
 
 
