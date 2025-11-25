@@ -215,38 +215,55 @@ import numpy as np
 
 # print(arr2d)
 
+# import numpy as np
+# import pandas as pd
+# import matplotlib.pyplot as plt
+
+# # reproducibility : setting numpy to generate same sequence of random numbers (If you're training a model, initializing weights, splitting data, etc. with randomness, you want to be able to reproduce the same results later.)
+# sd = np.random.seed(123)
+# print(np.random.randint(1, 10, 5))
+
+# poids = pd.Series([3, 7, 12])
+
+# animal = pd.Series(['chat', 'chien', 'koala'])
+
+# animal = animal.astype("category")
+# animal = animal.astype(str)
+
+# #making a table with the two series
+# animaux = pd.DataFrame(
+#     zip(animal, poids),
+#     columns= ['animal', 'poids']
+# )
+
+# print(animaux)
+
+# # indexing
+# print(animaux['poids'])
+
+# get = animaux.loc[animaux['animal'] == "chat", "poids"]
+# get1 = animaux.loc[animaux['poids'] == 12, "animal"]
+# print(get)
+# print(get1)
+
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import requests
 
-# reproducibility : setting numpy to generate same sequence of random numbers (If you're training a model, initializing weights, splitting data, etc. with randomness, you want to be able to reproduce the same results later.)
-sd = np.random.seed(123)
-print(np.random.randint(1, 10, 5))
+url = "https://www.insee.fr/fr/statistiques/fichier/6800675/v_commune_2023.csv"
+url_backup = "https://minio.lab.sspcloud.fr/lgaliana/data/python-ENSAE/cog_2023.csv"
 
-poids = pd.Series([3, 7, 12])
+try:
+    response = requests.get(url)
+except requests.exceptions.RequestException as e :
+    print(f"Error : {e}")
+    response = requests.get(url_backup)
 
-animal = pd.Series(['chat', 'chien', 'koala'])
-
-animal = animal.astype("category")
-animal = animal.astype(str)
-
-#making a table with the two series
-animaux = pd.DataFrame(
-    zip(animal, poids),
-    columns= ['animal', 'poids']
-)
-
-print(animaux)
-
-# indexing
-print(animaux['poids'])
-
-get = animaux.loc[animaux['animal'] == "chat", "poids"]
-get1 = animaux.loc[animaux['poids'] == 12, "animal"]
-print(get)
-print(get1)
-
-
+if response.status_code == 200:
+    with open("cog_2023.csv", "wb") as file:
+        file.write(response.content)
 
 
 
