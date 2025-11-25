@@ -230,12 +230,15 @@ animal = pd.Series(['chat', 'chien', 'koala'])
 animal = animal.astype("category")
 animal = animal.astype(str)
 
+#making a table with the two series
 animaux = pd.DataFrame(
     zip(animal, poids),
     columns= ['animal', 'poids']
 )
 
 print(animaux)
+
+# indexing
 print(animaux['poids'])
 
 
