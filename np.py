@@ -224,12 +224,19 @@ sd = np.random.seed(123)
 print(np.random.randint(1, 10, 5))
 
 poids = pd.Series([3, 7, 12])
-print(poids)
 
 animal = pd.Series(['chat', 'chien', 'koala'])
-print(animal)
 
+animal = animal.astype("category")
+animal = animal.astype(str)
 
+animaux = pd.DataFrame(
+    zip(animal, poids),
+    columns= ['animal', 'poids']
+)
+
+print(animaux)
+print(animaux['poids'])
 
 
 
