@@ -247,10 +247,10 @@ import numpy as np
 # print(get1)
 
 
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import requests
+# import numpy as np
+# import pandas as pd
+# import matplotlib.pyplot as plt
+# import requests
 
 # url = "https://www.insee.fr/fr/statistiques/fichier/6800675/v_commune_2023.csv"
 # url_backup = "https://minio.lab.sspcloud.fr/lgaliana/data/python-ENSAE/cog_2023.csv"
@@ -266,10 +266,17 @@ import requests
 #         file.write(response.content)
 
 
-df = pd.read_csv("./cog_2023.csv")
-ax = df.axes
-cl = df.columns
+# df = pd.read_csv("./cog_2023.csv")
+# # df.axes = [df.index, df.columns]
+# ix = df.index
+# cl = df.columns
+# ax = df.axes
+# print(ix)
+# print(cl)
+# print(ax)
 
+# dim = df.ndim
+# print(dim)
 
 
 
